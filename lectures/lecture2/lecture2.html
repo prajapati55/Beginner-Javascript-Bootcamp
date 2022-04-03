@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Lecture 2</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      console.log("lecture2");
+      //Data structures and types
+      //primitive
+      //1. Boolean. true and false.
+      //2. null. A special keyword denoting a null value. (Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.)
+      //3. undefined. A top-level property whose value is not defined.
+      //4. Number. An integer or floating point number. For example: 42 or 3.14159.
+      //5. BigInt. An integer with arbitrary precision. For example: 9007199254740992n.
+      //6. String. A sequence of characters that represent a text value. For example: "Howdy"
+      //7. Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.
+      //non primitive
+      //8.Object
+      var str = "dfasdbfdsbfbdsfadsbf";
+      var newObj = {
+        name: "Kumar",
+        age: 33,
+        "post-office": "something",
+      };
+      //   var newObj = new Object({ name: "Kumar", age: 33 });
+      console.log(newObj.name);
+      newObj.name = "Javed";
+      console.log(newObj);
+
+      //data type conversion
+      var answer = 43;
+      //   console.log(answer);
+      //   answer = "Thanks for all the fish...";
+      //   console.log(answer);
+
+      //concatination
+      x = "The answer is " + 42; // "The answer is 42"
+      y = 42 + " is the answer"; // "42 is the answer"
+      //   console.log("x => ", x);
+      //   console.log("y => ", y);
+      //   console.log("subtract ", "37" - 7);
+      //   console.log("add ", "37" + 7);
+
+      //Control flow and error handling
+      //if else
+
+      if (answer == 42) {
+        console.log("answer", answer);
+      }
+    </script>
+  </body>
+</html>
