@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Lecture 4-part1</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      //operators
+      //++,  increament operator
+      //--  decreament operator
+      //% modulo operator
+      // && => AND , || => OR, ! => NOT  logical operator
+      /*
+
+          1 && 1 =>  1
+          0 && 1 =>  0
+          1 && 0 =>  0
+          0 && 0 =>  0
+
+          1 || 1 =>  1
+          0 || 1 =>  1
+          1 || 0 =>  1
+          0 || 0 =>  0
+
+          !1 => 0
+          !0 => 1
+         */
+
+      // printName("kumar");
+      // function printName(name) {
+      //   console.log(name);
+      // }
+
+      // let printName = function (name) {
+      //   console.log(name);
+      // };
+
+      // let printName = (name) => {
+      //   console.log(name);
+      // };
+
+      // printName("Pravendra"); //calling
+
+      /*
+         2. Write a program to print message according to his age :
+      -> if age is less than 10 print "you are child"
+      -> if age is less than 18 and greater than 10 print "you are teen"
+      -> if age is greater 18 and less than 40 print "you are young"
+      -> if age is greater 40 print "you are moving towards old"
+      -> using switch case as well
+         */
+      const printAge = (age) => {
+        switch (age) {
+          case 10:
+            console.log("You are child");
+            break;
+          case 20:
+            console.log("You are teen age");
+            break;
+          default:
+            console.log("You are out of age bound");
+        }
+      };
+
+      printAge(21);
+    </script>
+  </body>
+</html>
