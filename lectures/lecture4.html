@@ -51,15 +51,30 @@
       -> using switch case as well
          */
       const printAge = (age) => {
-        switch (age) {
-          case 10:
-            console.log("You are child");
+        // switch (age) {
+        //   case 10:
+        //     console.log("You are child");
+        //     break;
+        //   case 20:
+        //     console.log("You are teen age");
+        //     break;
+        //   default:
+        //     console.log("You are out of age bound");
+        // }
+        let newage = age;
+        switch (true) {
+          case newage <= 35:
+            console.log("You Fail");
             break;
-          case 20:
-            console.log("You are teen age");
+          case newage >= 36 && newage <= 60:
+            console.log("Just pass");
             break;
-          default:
-            console.log("You are out of age bound");
+          case newage >= 61 && newage <= 80:
+            console.log("Good");
+            break;
+          case newage > 81:
+            console.log("Excelent");
+            break;
         }
       };
 
