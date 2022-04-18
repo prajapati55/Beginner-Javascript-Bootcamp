@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Lecture 5-part1</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      //Arrays and Objects
+      // Array => [], Object=> {}
+      //array literal
+      const fruits = ["Oranges", "Apples", "Oranges", "Kiwi", "Mango"];
+      const persons = ["Kumar", "sharma", "Khan"];
+      console.log("fruits", fruits[1]);
+      console.log("persons", persons.length);
+      //Object literal
+      const person = {
+        name: "Sharma Kumar",
+        age: 24,
+      };
+      console.log("person", person);
+
+      //using constructor
+      const countries = new Array("India", "Bhutan");
+      console.log("countries", countries);
+      console.log("countries", countries[1]);
+
+      // array iteration
+
+      for (let i = 0; i < persons.length; i++) {
+        console.log(`${i} => ${persons[i]}`);
+      }
+      //find index
+      //   console.log("index", fruits.indexOf("Oranges"));
+      //   console.log(
+      //     "index",
+      //     fruits.findIndex((fruit) => fruit === "Oranges")
+      //   );
+      // for of and for in  TODO:
+    </script>
+  </body>
+</html>
