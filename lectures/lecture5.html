@@ -30,6 +30,34 @@
       for (let i = 0; i < persons.length; i++) {
         console.log(`${i} => ${persons[i]}`);
       }
+
+      // Objects
+      const newObj = {
+        key1: "value1",
+      };
+      const newObj1 = new Object();
+      newObj1.key1 = "value1";
+      //
+      const person1 = {
+        isHuman: false,
+        printIntroduction: function () {
+          // console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+        },
+      };
+      person1.isHuman = true;
+      person1.name = "vikas digg";
+      person1.printIntroduction();
+
+      const person2 = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 26,
+        eyeColor: "blue",
+      };
+      //Object.keys
+      // console.log("person2.length", Object.values(person2).length);
+      // console.log("person1", );
+      // const me = Object.create(person1);
       //find index
       //   console.log("index", fruits.indexOf("Oranges"));
       //   console.log(
@@ -37,6 +65,42 @@
       //     fruits.findIndex((fruit) => fruit === "Oranges")
       //   );
       // for of and for in  TODO:
+      //introduced in ES5
+      // for in
+      // for (let key in person2) {
+      //   console.log(key, person2[key]);
+      // }
+
+      // // for of
+      // for (let person of persons) {
+      //   console.log(person);
+      // }
+      // DOM Manipulation
+      let table = '<table border="1">';
+      table += "<thead>";
+      table += "<tr>"; // table = table + "<th>"
+      for (let thead of Object.keys(person2)) {
+        table += "<th>" + thead + "</th>";
+      }
+      table += "</tr>";
+      table += "</thead>";
+      table += "<tr>";
+      // for (let tkey of Object.keys(person2)) {
+      //   table += "<td>" + person2[tkey] + "</td>";
+      // }
+      for (let tvalue of Object.values(person2)) {
+        table += "<td>" + tvalue + "</td>";
+      }
+      table += "</tr>";
+      table += "</table>";
+
+      document.getElementById("demo").innerHTML = table;
+
+      //Q1 =>  let str="Rajamahal"; WAP to reverse string
+      let str = "Rajamahal";
+      for (let char of str) {
+        console.log("char => ", char);
+      }
     </script>
   </body>
 </html>
