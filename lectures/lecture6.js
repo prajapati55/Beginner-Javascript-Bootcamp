@@ -34,7 +34,7 @@ const person = {
 // console.log("newPerson", newPerson)
 // console.log("person", person)
 
-const newPerson = { ...person, address: "somethig" };
+const newPerson = { ...person, address: "something" };
 // newPerson.name = "Khan"
 // console.log("newPerson", newPerson)
 // console.log("person", person)
@@ -77,7 +77,70 @@ let cars = [
 // const filteredCars = cars.filter((car) => {
 //     return car.capacity == 9
 // })
-// find H.W.
-const filteredCars = cars.filter((car) => car.capacity == 5)
-console.log("filteredCars")
-console.log(filteredCars)
+// H.w. => find method
+// const filteredCars = cars.filter((car) => car.capacity == 5)
+// console.log("filteredCars")
+// console.log(filteredCars)
+
+
+//iteration using for of loop
+// for (let car of cars) {
+//     console.log("car-color", car.color)
+// }
+
+// for (let prop in newPerson) {
+//     console.log("newPerson props", prop)
+//     // console.log("newPerson props", newPerson[prop])
+// }
+
+// find
+// const array1 = [11, 5, 12, 8, 130, 44];
+// const found = array1.find(element => element > 135);
+// console.log(found);
+
+// map 
+// const capacityArr = cars.map((car) => car.capacity);
+// console.log("capacityArr", capacityArr)
+// const modifiedArr = cars.map((car) => {
+//     return {
+//         type: car.type,
+//         capacity: car.capacity
+//     }
+// });
+
+// const modifiedArr = cars.map(({ type, capacity, color }) => {
+//     return {
+//         type: type,
+//         capacity: capacity,
+//     }
+// });
+
+// const modifiedArr = cars.map(({ type, capacity, color }) => {
+//     return {
+//         type,
+//         capacity,
+//         color
+//     }
+// });
+
+// console.log("modifiedArr", modifiedArr)
+
+// reduce method
+// const array1 = [1, 4, 9, 16];
+
+// // pass a function to map
+// const sum = array1.reduce((sum, value) => {
+//     return sum + value;
+// }, 0);
+
+// console.log("sum", sum);
+
+
+const numbers = [100, 100, 50, 20];
+const totalNum = numbers.reduce(myFunc);
+
+function myFunc(total, num) {
+    return total - num;
+}
+//0-175 = -175
+console.log("totalNum", totalNum)
