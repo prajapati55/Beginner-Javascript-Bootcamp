@@ -9,7 +9,6 @@ var employees = [
     years: 7,
 
   },
-
   {
 
     id: 102,
@@ -19,7 +18,6 @@ var employees = [
     years: 13,
 
   },
-
   {
 
     id: 123,
@@ -29,7 +27,6 @@ var employees = [
     years: 23,
 
   },
-
   {
 
     id: 119,
@@ -37,18 +34,13 @@ var employees = [
     name: "Emmet Foster",
 
     years: 22,
-
   }
-
 ];
 
 
 Expected Output:	65
 
-2.  var members =
-
-[
-
+2.  var members = [
   {
 
     id: 111,
@@ -58,7 +50,6 @@ Expected Output:	65
     position: "Intern",
 
   },
-
   {
 
     id: 102,
@@ -78,7 +69,6 @@ Expected Output:	65
     position: "Intern",
 
   },
-
   {
 
     id: 66,
@@ -88,7 +78,6 @@ Expected Output:	65
     position: "Employee",
 
   }
-
 ];
 
 Expected output: list of all interns.
