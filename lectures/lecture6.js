@@ -89,8 +89,8 @@ let cars = [
 // }
 
 // for (let prop in newPerson) {
-//     console.log("newPerson props", prop)
-//     // console.log("newPerson props", newPerson[prop])
+//     // console.log("newPerson props", prop)
+//     console.log("newPerson props", newPerson[prop])
 // }
 
 // find
@@ -103,8 +103,8 @@ let cars = [
 // console.log("capacityArr", capacityArr)
 // const modifiedArr = cars.map((car) => {
 //     return {
-//         type: car.type,
-//         capacity: car.capacity
+//         ...car,
+//         speed: 2 * car.capacity
 //     }
 // });
 
@@ -130,17 +130,17 @@ let cars = [
 
 // // pass a function to map
 // const sum = array1.reduce((sum, value) => {
-//     return sum + value;
+//     return sum - value;
 // }, 0);
 
 // console.log("sum", sum);
 
 
-const numbers = [100, 100, 50, 20];
-const totalNum = numbers.reduce(myFunc);
+// const numbers = [100, 100, 50, 20];
+// const totalNum = numbers.reduce(myFunc);
 
-function myFunc(total, num) {
-    return total - num;
-}
-//0-175 = -175
-console.log("totalNum", totalNum)
+// function myFunc(total, num) {
+//     return total - num;
+// }
+// // //0-175 = -175
+// console.log("totalNum", totalNum)
