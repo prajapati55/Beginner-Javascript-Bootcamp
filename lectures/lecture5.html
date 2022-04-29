@@ -37,6 +37,8 @@
       };
       const newObj1 = new Object();
       newObj1.key1 = "value1";
+      newObj1.key2 = "value2";
+      newObj1.key3 = "value3";
       //
       const person1 = {
         isHuman: false,
@@ -56,6 +58,8 @@
       };
       //Object.keys
       // console.log("person2.length", Object.values(person2).length);
+      // let keys = Object.keys(person2);
+      // console.log("person2.length", keys.length);
       // console.log("person1", );
       // const me = Object.create(person1);
       //find index
@@ -98,9 +102,12 @@
 
       //Q1 =>  let str="Rajamahal"; WAP to reverse string
       let str = "Rajamahal";
+      let rev = "";
       for (let char of str) {
-        console.log("char => ", char);
+        // console.log("char => ", char);
+        rev = char + rev;
       }
+      console.log("rev", rev);
     </script>
   </body>
 </html>
