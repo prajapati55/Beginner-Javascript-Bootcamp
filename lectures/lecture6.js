@@ -19,31 +19,41 @@ const person = {
 // const age = person.age;
 // const { name, age, address } = person;
 
-
+// console.log("person", person)
 // console.log(name)
 // console.log(age)
 // console.log(address)
+
+// const frutes = ["Apple", "Orange", "Kiwi"];
+// // console.log(frutes[0])
+
+// const [apple, orange] = frutes;
+// console.log(frutes)
 
 //Spread and rest
 // symbol: ...
 
 // const newPerson = person;
-// console.log("newPerson", newPerson)
 // console.log("person", person)
+// console.log("newPerson", newPerson)
+
 // newPerson.name = "Sharma"
-// console.log("newPerson", newPerson)
+// newPerson.address = "something"
 // console.log("person", person)
+// console.log("newPerson", newPerson)
+
 
 const newPerson = { ...person, address: "something" };
 // newPerson.name = "Khan"
-// console.log("newPerson", newPerson)
 // console.log("person", person)
+// console.log("newPerson", newPerson)
+
 
 /// Rest operator
-const { age, ...otherProps } = newPerson;
+// const { age, ...otherProps } = newPerson;
 
-console.log("age", age)
-console.log("otherProps", otherProps)
+// console.log("age", age)
+// console.log("otherProps", otherProps)
 
 //filter, map
 let cars = [
@@ -75,10 +85,10 @@ let cars = [
 
 
 // const filteredCars = cars.filter((car) => {
-//     return car.capacity == 9
+//     return car.capacity == 6
 // })
 // H.w. => find method
-// const filteredCars = cars.filter((car) => car.capacity == 5)
+// const filteredCars = cars.filter((car) => car.capacity == 7)
 // console.log("filteredCars")
 // console.log(filteredCars)
 
@@ -129,11 +139,11 @@ let cars = [
 // const array1 = [1, 4, 9, 16];
 
 // // pass a function to map
-// const sum = array1.reduce((sum, value) => {
+// const total = array1.reduce((sum, value) => {
 //     return sum - value;
 // }, 0);
 
-// console.log("sum", sum);
+// console.log("sum", total);
 
 
 // const numbers = [100, 100, 50, 20];
@@ -144,3 +154,9 @@ let cars = [
 // }
 // // //0-175 = -175
 // console.log("totalNum", totalNum)
+
+// let a = 6;
+// let b = 7;
+// [b, a] = [a, b];
+// console.log("a", a)
+// console.log("b", b)
