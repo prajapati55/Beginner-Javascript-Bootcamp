@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of any Number</title>
+</head>
+
+<body>
+
+    <table align="center" width="600" border="1" cellpadding="10px" cellspacing="10px">
+        <tr>
+            <td>Factorial</td>
+            <td id="factorial1"></td>
+            <td id="factorial2"></td>
+        </tr>
+    </table>
+
+    <script>
+        const factorial = (num) =>{
+            if(num < 0) {
+                document.getElementById('factorial1').innerHTML = "Negative number factorial doesn't exist";
+            } else {
+                let fact = 1;
+                for (let i = num; i > 0; i--) {
+                    fact *= i; //(fact = fact * i)
+                    //concern 2
+                    if(i=== 1){
+                        document.getElementById('factorial1').innerHTML += i ;
+                    }else{
+                        document.getElementById('factorial1').innerHTML += i + " * ";
+                    }
+                    
+                }
+                document.getElementById('factorial2').innerHTML = `The Factorial of  ${num} : ` + fact;
+            };
+            
+        }
+        factorial(5);
+    </script>
+
+</body>
+
+</html>
