@@ -169,12 +169,12 @@ https://www.iconfinder.com/korawan_m
         <div class="col-10 mx-auto col-md-6">
           <form>
             <div class="input-group mb-3">
-              <div class="input-group-prepend ">
-                <span class="input-group-text search-box" id="search-icon"><i class="fas fa-search"></i></span>
+              <div class="input-group-prepend " onclick="searchItemsByQuery()" >
+                <span class="input-group-text search-box" id="search-icon" ><i class="fas fa-search"></i></span>
               </div>
-              <input type="text" class="form-control" placeholder='item....' id="search-item">
+              <input type="text" class="form-control" placeholder='item....' id="search-item" onchange="searchItemsByQuery()">
             </div>
-
+            <span class="text-danger" style="display: none;" id="message" ></span>
           </form>
         </div>
       </div>
@@ -450,12 +450,6 @@ https://www.iconfinder.com/korawan_m
   </section>
   <!--end of store items -->
 
-
-
-  <!-- jquery -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.bundle.min.js"></script>
   <!-- script js -->
   <script src="js/app.js"></script>
 </body>
