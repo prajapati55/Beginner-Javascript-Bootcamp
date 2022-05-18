@@ -190,3 +190,11 @@ const filterItems2 = (anchor) => {
     const filteredItems = dataItems.filter((item) => item.type === filter);
     renderHtml(filteredItems, false);
 };
+
+const searchFilter2 = (search) => {
+  let filteredItems = dataItems.filter((item) => item.type.includes(search));
+  if(search.trim() === "" || search === "") {
+    filteredItems = dataItems;
+  }
+  renderHtml(filteredItems, false);
+}
