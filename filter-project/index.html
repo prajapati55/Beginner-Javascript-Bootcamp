@@ -14,6 +14,13 @@
   <link rel="stylesheet" href="css/all.css">
   <title>Starter Template</title>
   <style>
+    .sldierdots{margin-top: 15px;}
+    .sldierdots li{cursor: pointer;margin: 0 5px;}
+    .mainSlider .slide{display: none;}
+    .mainSlider .slide.active{display: block;}
+    .slide.slider2{filter: grayscale(100%);}
+    .slide.slider3{filter: brightness(130%);}
+     
   </style>
 </head>
 
@@ -60,6 +67,75 @@ https://www.iconfinder.com/korawan_m
       </div>
     </nav>
     <!-- end of nav -->
+            <!-- Custom Slider -->
+
+            <section class="container-fluid p-0 mb-5">
+              <div class="mainSlider position-relative">
+                <div class="slide active slider1">
+                  <img class="w-100" src="img/slider1.jpeg" alt="Slider 1">
+                </div>
+                <div class="slide slider2">
+                  <img class="w-100" src="img/slider1.jpeg" alt="Slider 1">
+                </div>
+                <div class="slide slider3">
+                  <img class="w-100" src="img/slider1.jpeg" alt="Slider 1">
+                </div>
+              </div>
+              <div class="sldierArrow text-center">
+                <button onclick="moveBackward()" style="cursor: pointer;"> < Left </button>
+                <button onclick="moveForward()" style="cursor: pointer;"> Right > </button>
+              </div>
+              <ul class="sldierdots text-center list-inline">
+                <li class="list-inline-item" onclick="showItem(1)">dot 1</li>
+                <li class="list-inline-item" onclick="showItem(2)">dot 2</li>
+                <li class="list-inline-item" onclick="showItem(3)">dot 3</li>
+              </ul>
+              <div class="sliderCount text-center">
+                <span class="current">1</span> / <span class="total">3</span>
+              </div>
+            </section>
+<script>
+  let activeItem = 1;
+  let maxItem = 3;
+  const moveForward = () => {
+    activeItem++;
+    document.querySelectorAll(".slide").forEach((item) => {
+      item.classList.remove('active');
+    });
+    if(activeItem > maxItem){
+      activeItem = 1;
+    }
+    document.querySelector(`.slider${activeItem}`).classList.add("active");
+    document.querySelector(`.current`).innerHTML = activeItem
+  }
+  const moveBackward = () => {
+    activeItem--;
+    //remove active class from all items
+    document.querySelectorAll(".slide").forEach((item) => {
+      item.classList.remove('active');
+    });
+    if(activeItem < 1){
+      activeItem = maxItem;
+    }
+    //add active class selected slider
+    document.querySelector(`.slider${activeItem}`).classList.add("active");
+     // show selected indexNumber
+    document.querySelector(`.current`).innerHTML = activeItem
+  }
+
+  const showItem = (activeIndex) => {
+    //remove active class from all items
+    document.querySelectorAll(".slide").forEach((item) => {
+      item.classList.remove('active');
+    });
+    //add active class selected slider
+    document.querySelector(`.slider${activeIndex}`).classList.add("active");
+    activeItem = activeIndex;
+
+    // show selected indexNumber 
+    document.querySelector(`.current`).innerHTML = activeItem
+  }
+</script>
     <!-- banner  -->
     <div class="container-fluid">
       <div class="row max-height justify-content-center align-items-center">
