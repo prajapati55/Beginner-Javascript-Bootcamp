@@ -135,6 +135,10 @@ https://www.iconfinder.com/korawan_m
     // show selected indexNumber 
     document.querySelector(`.current`).innerHTML = activeItem
   }
+
+  setInterval(()=>{
+    moveForward()
+  },2000)
 </script>
     <!-- banner  -->
     <div class="container-fluid">
@@ -261,6 +265,7 @@ https://www.iconfinder.com/korawan_m
   <!--end of store items -->
 
   <!-- script js -->
+  <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 

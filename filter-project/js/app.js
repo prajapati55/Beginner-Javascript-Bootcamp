@@ -198,3 +198,41 @@ const searchFilter2 = (search) => {
   }
   renderHtml(filteredItems, false);
 }
+
+// ajax api call
+(function () {
+  //call automaitcally when dom load
+
+ function getUsersList(){
+      $.ajax({
+        url:"https://jsonplaceholder.typicode.com/users",
+        type:"GET",
+        success:function(res){
+          console.log(res)
+        },
+        error: function(err){
+          console.log("err", err)
+        }
+      })
+ }
+ getUsersList()
+
+ function updateUser(id){
+    const data = {name:"Pravendra Kumar"}
+    $.ajax({
+      url:`https://jsonplaceholder.typicode.com/users/${id}`,
+      type:"PATCH",
+      data:data,
+      success:function(res){
+        console.log(res)
+      },
+      error: function(err){
+        console.log("err", err)
+      }
+    })
+}
+
+setTimeout(()=>{
+  updateUser(1);
+},3000)
+})();
