@@ -161,7 +161,7 @@ const renderHtml = (data = [], renderInitial= false) => {
        <div class="card ">
          <div class="img-container">
            <img src="img/${item.image}" class="card-img-top store-img" alt="">
-           <span class="store-item-icon">
+           <span class="store-item-icon" onclick="addtoCart(${item.price})">
              <i class="fas fa-shopping-cart"></i>
            </span>
          </div>
@@ -177,10 +177,24 @@ const renderHtml = (data = [], renderInitial= false) => {
   }
   document.getElementById("store-items").innerHTML = renderedHtml;
 };
+let cartItems = [];
+//add to cart
+const addtoCart = (itemPrice) => {
+   cartItems.push(itemPrice);
+   displayCartItems();
+}
 
+const displayCartItems = () => {
+ document.getElementById("item-count").innerHTML = cartItems.length;
+ let totalPrice = cartItems.reduce((curr, price) => {
+    return curr + price
+ },0)
+ document.querySelector(".item-total").innerHTML = totalPrice;
+}
 (function () {
     //call automaitcally when dom load
   renderHtml([], true);
+  displayCartItems();
 })();
 
 
